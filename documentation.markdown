@@ -2,6 +2,7 @@
 layout: page
 title: Documentation
 permalink: /documentation/
+order: 5
 ---
 
 <ul class="posts-in-list">

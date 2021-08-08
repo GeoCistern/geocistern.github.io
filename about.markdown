@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+order: 1
 ---
 CISTERN is building a database and a virtual research space that bring together a wide range of geographical books, atlases, land descriptions, and maps in Turkish, Arabic, and English produced between the 15th and early 20th-centuries. Initially rare artifacts, these objects gradually became part of everyday life, reflecting the rise of territorialized states, intensifying militarization, and sweep capitalization of Middle Eastern economies. That Islamic geographers were instrumental in the transmission of classical spatial knowledge, such as Ptolemy’s Optics, to the European Renaissance is well known. Subsequent knowledge production, however, remains overlooked.
 
