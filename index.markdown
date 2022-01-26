@@ -61,9 +61,7 @@ layout: home
       <div class="hero-text">
         <h1 style="font-size:50px">CISTERN</h1>
         <p>A Database of Geographical Knowledge in the Ottoman World</p>
-        <button onclick="location.href='{{site.baseurl}}/about/';">
-        ABOUT
-        </button>
+        <button onclick="location.href='{{site.baseurl}}/about/';">ABOUT</button>
       </div>
       <div class="sourcing-text">
         <h3 style="font-size:10px">Source: Library of Congress</h3>

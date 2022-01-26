@@ -1,10 +1,4 @@
----
-layout: home
-title: About
-permalink: /about/
-order: 1
----
-<style>
+I"Ý<style>
   .container{
     position: relative;
     text-align: center;
@@ -27,6 +21,7 @@ order: 1
     background-size: cover;
     position: relative;
     width: 100%;
+    height: 60%;
     padding-top: 35vh;
     padding-bottom: 35vh;
   }
@@ -36,24 +31,16 @@ order: 1
     margin-left:auto;
     margin-right:auto;
   }
-  <!--GO FIX THIS-->
-  .sourcing-text{
-    text-align: right;
-    color: white;
-    top: 0;
-    right: 0;
-  }
 
 </style>
 
 <body>
   <div class="container">
     <div class="banner"></div>
-    <!--<img src="{{site.baseurl}}/images/BannerImage.jpeg"  style="height:400px; width: 100%; object-fit:cover; filter: brightness(50%);">
+    <!--<img src="/images/BannerImage.jpeg"  style="height:400px; width: 100%; object-fit:cover; filter: brightness(50%);">
   -->
     <div class="centered" style="font-size: 50px; top: 42%;">CISTERN</div>
     <div class="centered" style="top: 55%;">A Database of Geographical Knowledge in the Ottoman World</div>
-    <h3 style="font-size:10px">Source: Library of Congress</h3>
   </div>
 
   <div class="article">
@@ -68,3 +55,4 @@ order: 1
     <p>This tool is housed in a virtual space that has the basic architecture of a cistern, a calm underground space sustaining a bustling city. The pairing of academic research with a virtual research space aims to generate innovative thought-processes and research questions while at the same time offering a new kind of immersive environment that is conducive to attention (de)focusing, collaborative learning, and creative ignition.</p>
   </div>
 </body>
+:ET
