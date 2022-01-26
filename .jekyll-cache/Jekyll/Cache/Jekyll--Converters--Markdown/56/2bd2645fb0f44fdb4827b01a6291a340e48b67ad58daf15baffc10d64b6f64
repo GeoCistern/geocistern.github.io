@@ -1,7 +1,6 @@
-I"z<style>
+I" <style>
   .container{
     position: relative;
-    text-align: center;
   }
   .wrapper{
     max-width:none;
@@ -42,12 +41,14 @@
 
 <body>
   <div class="container">
-    <div class="banner"></div>
+    <div class="banner">
+      <h3 style="text-align: right; color: white; vertical-align: top; font-size:10px">Source: Library of Congress</h3>
+    </div>
     <!--<img src="/images/BannerImage.jpeg"  style="height:400px; width: 100%; object-fit:cover; filter: brightness(50%);">
   -->
     <div class="centered" style="font-size: 50px; top: 42%;">CISTERN</div>
     <div class="centered" style="top: 55%;">A Database of Geographical Knowledge in the Ottoman World</div>
-    <h3 style="font-size:10px">Source: Library of Congress</h3>
+
   </div>
 
   <div class="article">
