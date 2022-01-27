@@ -89,8 +89,7 @@ layout: home
         position: relative;
         margin: 0 auto;
         width: 100%;
-        height: 90%;
-
+        height: 100%;
       }
       #vid{
         position: fixed;

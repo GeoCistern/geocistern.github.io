@@ -1,4 +1,4 @@
-I"˜<style>
+I"Â<style>
   .container{
     position: relative;
   }
@@ -20,8 +20,8 @@
     background-size: cover;
     position: relative;
     width: 100%;
-    padding-top: 35vh;
-    padding-bottom: 35vh;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
   }
   .article{
     max-width: -webkit-calc(800px - (30px * 2));
@@ -42,14 +42,12 @@
 <body>
   <div class="container">
     <div class="banner">
-
-      <h3 style="text-align: right; color: white; bottom: 0; font-size:10px">Source: Library of Congress</h3>
-
+      <h3 style="text-align: right; color: white; vertical-align: top; font-size:10px">Source: Library of Congress</h3>
     </div>
     <!--<img src="/images/BannerImage.jpeg"  style="height:400px; width: 100%; object-fit:cover; filter: brightness(50%);">
   -->
-    <div class="centered" style="font-size: 50px; top: 42%;">CISTERN</div>
-    <div class="centered" style="top: 55%;">A Database of Geographical Knowledge in the Ottoman World</div>
+    <div class="centered" style="font-size: 50px; font-size: 5vw; top: 42%;">CISTERN</div>
+    <div class="centered" style="top: 55%; font-size: 1.8vw;">A Database of Geographical Knowledge in the Ottoman World</div>
 
   </div>
 
