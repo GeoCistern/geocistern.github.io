@@ -79,24 +79,24 @@ order: 2
         </script>
 
 
-<table id="myTable" class="table table-striped mt32 customers-list">
-  {% for row in site.data.database_may %}
+  <table id="myTable">
+  {% for row in site.data.database-august %}
+  <!-- table head -->
     {% if forloop.first %}
-    <tr>
-      {% for pair in row %}
+    <!-- tr -->
+      {% for pair in row limit: 6%}
         <th>{{ pair[0] }}</th>
         {% endfor %}
-      </tr>
+    
     {% endif %}
 
-  <tbody>
-    {% tablerow pair in row %}
+<!-- table body -->
+    {% tablerow pair in row limit: 6 %}
       {{ pair[1] }}
     {% endtablerow %}
-  </tbody>
+
 {% endfor %}
 
-</table>
 
 
 <!-- source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table -->
@@ -120,4 +120,3 @@ order: 2
    }
  }
  </script>
- </body>

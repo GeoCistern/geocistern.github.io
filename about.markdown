@@ -5,11 +5,15 @@ permalink: /about/
 order: 1
 ---
 <style>
+
   .container{
     position: relative;
+
   }
-  .wrapper{
-    max-width:none;
+
+  .page-content{
+    padding-top: 0;
+
   }
   .centered{
     position: absolute;
@@ -28,6 +32,7 @@ order: 1
     width: 100%;
     padding-top: 20vh;
     padding-bottom: 20vh;
+
   }
   .article{
     max-width: -webkit-calc(800px - (30px * 2));
@@ -46,7 +51,8 @@ order: 1
 </style>
 
 <body>
-  <div class="container">
+
+  <div id="con" class="container">
     <div class="banner">
       <h3 style="text-align: right; color: white; vertical-align: top; font-size:10px">Source: Library of Congress</h3>
     </div>
