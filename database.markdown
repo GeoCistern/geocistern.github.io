@@ -83,17 +83,17 @@ order: 2
   {% for row in site.data.database-august %}
   <!-- table head -->
     {% if forloop.first %}
-    <!-- tr -->
+
       {% for pair in row limit: 6%}
         <th>{{ pair[0] }}</th>
         {% endfor %}
-    
+
     {% endif %}
 
 <!-- table body -->
     {% tablerow pair in row limit: 6 %}
       {{ pair[1] }}
-    {% endtablerow %}
+   {% endtablerow %}
 
 {% endfor %}
 

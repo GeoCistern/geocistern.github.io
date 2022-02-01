@@ -39,6 +39,7 @@ order: 1
     padding-top:30px;
     margin-left:auto;
     margin-right:auto;
+    padding-bottom: 30px;
   }
   <!--GO FIX THIS-->
   .sourcing-text{
