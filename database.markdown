@@ -9,13 +9,11 @@ order: 2
       <h3>
        <input type="text" id="seInput" class="search-box" onkeyup="myFunction(category.value)" placeholder="Search"/>
       </h3>
-
       <select name="category" id="category" class="filter-box">
         <option value="1">Author</option>
         <option value="3">Title</option>
       </select>
     </div>
-
     <div>
       <button type="button" class = "button-default"
       onclick="input('â')">â</button>
@@ -38,7 +36,6 @@ order: 2
       <button type="button" class = "button-default"
       onclick="input('û')">û</button>
     </div>
-    
     <script>
       function input(e){
         var seInput = document.getElementById("seInput");
