@@ -4,39 +4,10 @@ title: Database
 permalink: /database/
 order: 2
 ---
-    <style type="text/css">
-        h3 span {
-            font-size: 36px;
-        }
-        .button-default{
-          height: 30px;
-          width: 30px;
-          float: center;
-          border: white;
-          border-radius: 8px;
-          margin: 3px;
-          margin-bottom: 30px;
-        }
-        .search-box{
-          width: 70%;
-          float: left;
-          padding: 10px;
-          margin-bottom: 20px;
-        }
-
-        .filter-box{
-          width: 25%;
-          float: right;
-          padding: 10px;
-          margin-bottom: 20px;
-          background-color: WhiteSmoke;
-        }
-
-    </style>
 
    <div>
       <h3>
-      <input type="text" id="seInput" class="search-box" onkeyup="myFunction(category.value)" placeholder="Search">
+       <input type="text" id="seInput" class="search-box" onkeyup="myFunction(category.value)" placeholder="Search"/>
       </h3>
 
       <select name="category" id="category" class="filter-box">
@@ -66,14 +37,15 @@ order: 2
       onclick="input('ü')">ü</button>
       <button type="button" class = "button-default"
       onclick="input('û')">û</button>
-      </div>
-        <script>
-          function input(e){
-            var seInput = document.getElementById("seInput");
-            seInput.value = seInput.value + e;
-            document.getElementById("seInput").focus();
-          }
-        </script>
+    </div>
+    
+    <script>
+      function input(e){
+        var seInput = document.getElementById("seInput");
+        seInput.value = seInput.value + e;
+        document.getElementById("seInput").focus();
+      }
+    </script>
 
 
   <table id="myTable">
