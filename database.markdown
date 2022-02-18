@@ -4,8 +4,6 @@ title: Database
 permalink: /database/
 order: 2
 ---
-
-<head>
     <style type="text/css">
         h3 span {
             font-size: 36px;
@@ -35,9 +33,8 @@ order: 2
         }
 
     </style>
-</head>
-<body class="mt32">
-    <div>
+
+   <div>
       <h3>
       <input type="text" id="seInput" class="search-box" onkeyup="myFunction(category.value)" placeholder="Search">
       </h3>
