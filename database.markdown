@@ -81,22 +81,21 @@ order: 2
 
   <table id="myTable">
   {% for row in site.data.database-august-2 %}
-  <!-- table head -->
+
     {% if forloop.first %}
-
-      {% for pair in row limit: 6%}
+    <tr>
+      {% for pair in row limit: 6 %}
         <th>{{ pair[0] }}</th>
-        {% endfor %}
-
+      {% endfor %}
+    </tr>
     {% endif %}
 
-<!-- table body -->
     {% tablerow pair in row limit: 6 %}
       {{ pair[1] }}
-   {% endtablerow %}
+    {% endtablerow %}
 
-{% endfor %}
-
+  {% endfor %}
+  </table>
 
 
 <!-- source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table -->
