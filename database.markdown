@@ -81,16 +81,17 @@ order: 2
 
   <table id="myTable">
   {% for row in site.data.database-august %}
-  <!-- table head -->
     {% if forloop.first %}
-
+    <!-- table head -->
+      <tr>
       {% for pair in row limit: 6%}
         <th>{{ pair[0] }}</th>
         {% endfor %}
+      </tr>
 
     {% endif %}
 
-<!-- table body -->
+    <!-- table body -->
     {% tablerow pair in row limit: 6 %}
       {{ pair[1] }}
    {% endtablerow %}
