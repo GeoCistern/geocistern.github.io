@@ -84,12 +84,12 @@ order: 2
       <tr>
         {% if forloop.first %}
           {% for cell in row limit: 6%}
-            <th>{{ pair[0] }}</th>
+            <th>{{ cell }}</th>
           {% endfor %}
         {% endif %}
 
         {% for cell in row limit: 6%}
-          <td>{{ pair[0] }}</td>
+          <td>{{ cell }}</td>
         {% endfor %}
       </tr>
   {% endfor %}
