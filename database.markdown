@@ -80,7 +80,7 @@ order: 2
 
 
   <table id="myTable">
-  {% for row in site.data.database-august %}
+  {% for row in site.data.database-august-2 %}
   <!-- table head -->
     {% if forloop.first %}
 
