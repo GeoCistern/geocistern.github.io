@@ -38,6 +38,19 @@ order: 2
           word-break: break-word;
         }
 
+        dt {
+          clear: left;
+          color: darkolivegreen;
+          float: left;
+          font-weight: bold;
+          text-align: right;
+          width: 180px;
+        }
+        dd {
+          margin: 0 0 0 190px;
+          padding: 0 0 0.5em;
+        }
+
     </style>
 </head>
 <body class="mt32">
