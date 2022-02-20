@@ -88,15 +88,26 @@ order: 2
 
     {% if forloop.first %}
     <tr>
-      {% for pair in row limit: 6 %}
+      {% for pair in row limit:6 %}
         <th>{{ pair[0] }}</th>
       {% endfor %}
     </tr>
     {% endif %}
 
-    {% tablerow pair in row limit: 6 %}
+    {% tablerow pair in row limit:6 %}
       {{ pair[1] | xml_escape }}
     {% endtablerow %}
+
+    <tr class="extra-details" data-author-id="{{ row["AUTHOR_ID"] }}">
+      <td colspan="6">
+        <dl>
+          {% for pair in row offset:6 %}
+            <dt>{{ pair[0] | xml_escape }}:</dt>
+            <dd>{{ pair[1] | xml_escape }}</dd>
+          {% endfor %}
+        </dl>
+      </td>
+    </tr>
 
   {% endfor %}
   </table>
