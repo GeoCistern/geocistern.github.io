@@ -34,6 +34,10 @@ order: 2
           background-color: WhiteSmoke;
         }
 
+        td {
+          word-break: break-word;
+        }
+
     </style>
 </head>
 <body class="mt32">
