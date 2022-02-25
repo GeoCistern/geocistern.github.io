@@ -34,6 +34,10 @@ order: 2
           background-color: WhiteSmoke;
         }
 
+        td {
+          word-break: break-word;
+        }
+
     </style>
 </head>
 <body class="mt32">
@@ -80,7 +84,7 @@ order: 2
 
 
   <table id="myTable">
-  {% for row in site.data.database-august-2 %}
+  {% for row in site.data.database_final %}
 
     {% if forloop.first %}
     <tr>
@@ -91,7 +95,7 @@ order: 2
     {% endif %}
 
     {% tablerow pair in row limit: 6 %}
-      {{ pair[1] }}
+      {{ pair[1] | xml_escape }}
     {% endtablerow %}
 
   {% endfor %}
