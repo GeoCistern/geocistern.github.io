@@ -34,6 +34,31 @@ order: 2
           background-color: WhiteSmoke;
         }
 
+        td {
+          word-break: break-word;
+        }
+
+        dt {
+          clear: left;
+          color: darkolivegreen;
+          float: left;
+          font-weight: bold;
+          text-align: right;
+          width: 180px;
+        }
+        dd {
+          margin: 0 0 0 190px;
+          padding: 0 0 0.5em;
+        }
+
+        .extra-details {
+          display: none;
+        }
+
+        tr:not(.extra-details) {
+          cursor: pointer;
+        }
+
     </style>
 </head>
 <body class="mt32">
@@ -78,25 +103,42 @@ order: 2
           }
         </script>
 
+  <script>
+    function showHideExtraDetails(row) {
+      row.nextElementSibling.style.display = (row.nextElementSibling.style.display === "table-row") ? "none" : "table-row";
+    }
+  </script>
 
   <table id="myTable">
-  {% for row in site.data.database-august-2 %}
-  <!-- table head -->
+  {% for row in site.data.database_final %}
+
     {% if forloop.first %}
-
-      {% for pair in row limit: 6%}
+    <tr>
+      {% for pair in row limit:6 %}
         <th>{{ pair[0] }}</th>
-        {% endfor %}
-
+      {% endfor %}
+    </tr>
     {% endif %}
 
-<!-- table body -->
-    {% tablerow pair in row limit: 6 %}
-      {{ pair[1] }}
-   {% endtablerow %}
+    <tr onclick="showHideExtraDetails(this)">
+    {% for pair in row limit:6 %}
+      <td>{{ pair[1] | xml_escape }}</td>
+    {% endfor %}
+    </tr>
 
-{% endfor %}
+    <tr class="extra-details" data-author-id="{{ row["AUTHOR_ID"] }}">
+      <td colspan="6">
+        <dl>
+          {% for pair in row offset:6 %}
+            <dt>{{ pair[0] | xml_escape }}:</dt>
+            <dd>{{ pair[1] | xml_escape }}</dd>
+          {% endfor %}
+        </dl>
+      </td>
+    </tr>
 
+  {% endfor %}
+  </table>
 
 
 <!-- source : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table -->
