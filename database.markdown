@@ -38,6 +38,27 @@ order: 2
           word-break: break-word;
         }
 
+        dt {
+          clear: left;
+          color: darkolivegreen;
+          float: left;
+          font-weight: bold;
+          text-align: right;
+          width: 180px;
+        }
+        dd {
+          margin: 0 0 0 190px;
+          padding: 0 0 0.5em;
+        }
+
+        .extra-details {
+          display: none;
+        }
+
+        tr:not(.extra-details) {
+          cursor: pointer;
+        }
+
     </style>
 </head>
 <body class="mt32">
@@ -82,21 +103,39 @@ order: 2
           }
         </script>
 
+  <script>
+    function showHideExtraDetails(row) {
+      row.nextElementSibling.style.display = (row.nextElementSibling.style.display === "table-row") ? "none" : "table-row";
+    }
+  </script>
 
   <table id="myTable">
   {% for row in site.data.database_final %}
 
     {% if forloop.first %}
     <tr>
-      {% for pair in row limit: 6 %}
+      {% for pair in row limit:6 %}
         <th>{{ pair[0] }}</th>
       {% endfor %}
     </tr>
     {% endif %}
 
-    {% tablerow pair in row limit: 6 %}
-      {{ pair[1] | xml_escape }}
-    {% endtablerow %}
+    <tr onclick="showHideExtraDetails(this)">
+    {% for pair in row limit:6 %}
+      <td>{{ pair[1] | xml_escape }}</td>
+    {% endfor %}
+    </tr>
+
+    <tr class="extra-details" data-author-id="{{ row["AUTHOR_ID"] }}">
+      <td colspan="6">
+        <dl>
+          {% for pair in row offset:6 %}
+            <dt>{{ pair[0] | xml_escape }}:</dt>
+            <dd>{{ pair[1] | xml_escape }}</dd>
+          {% endfor %}
+        </dl>
+      </td>
+    </tr>
 
   {% endfor %}
   </table>
