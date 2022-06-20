@@ -13,10 +13,10 @@ order: 2
         .button-default{
           height: 30px;
           width: 30px;
-          float: center;
           border: white;
           border-radius: 8px;
           margin: 3px;
+          float: left;
           margin-bottom: 30px;
         }
         .search-box{
@@ -73,7 +73,7 @@ order: 2
       </select>
     </div>
 
-    <div>
+    <div style="float:left;">
       <button type="button" class = "button-default"
       onclick="input('â')">â</button>
       <button type="button" class = "button-default"
