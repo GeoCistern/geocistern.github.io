@@ -190,7 +190,7 @@ order: 5
 
     <script>
       /* This should work the same as above - try when you can - also slicing might not be the best but ah well*/
-        var type = ['Manuscript', 'Print'];
+       /* var type = ['Manuscript', 'Print'];
         for (var i = 0; i< type.length; i++){
           document.getElementById("filter-type").innerHTML += `<label class="label-checkbox" id="${type[i]}-9"><input type="checkbox"><span>`+ type[i] + '</span></label>';
 
@@ -212,7 +212,7 @@ order: 5
         $('.label-checkbox').each( function () {
           var dash = $(this).attr('id').indexOf("-");
           $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0,dash), $(this)) )
-        });
+        }); */
 
     </script>
 
