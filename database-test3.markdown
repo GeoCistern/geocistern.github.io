@@ -2955,7 +2955,7 @@ order: 6
 
     </div> <!-- clearfix, contains sidebar and table -->
 
-    <style>
+    <script>
       /* Creating the filter category buttons -- slicing might not be the best but ah well*/
 
       /* Turkish letters */
@@ -3168,7 +3168,7 @@ order: 6
         }
 
 
-    </style>
+    </script>
 
   </body>
  </html>
