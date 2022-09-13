@@ -110,7 +110,7 @@ order: 6
 
 
     </style>
-    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
   </head>
 
   <body>
@@ -2948,7 +2948,7 @@ order: 6
 
       <div class="dataTable-bottom">
       </div>
-      <script language="JavaScript" type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
+      <script language="JavaScript" type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js"></script>
       <script language="JavaScript" type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
       <script language="JavaScript" type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.12.1/api/fnFilterClear.js"></script>
 
