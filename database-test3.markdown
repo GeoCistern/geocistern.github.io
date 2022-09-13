@@ -3149,7 +3149,7 @@ order: 6
             }
             else{
             for (var [key, arrayVals] of Object.entries(dict)){
-              let fitsCriteria = false;
+              var fitsCriteria = false;
               var key = parseInt(`${key}`);
              for (var i in arrayVals){
                if (data[key].toUpperCase().includes(arrayVals[i].toUpperCase())) {
