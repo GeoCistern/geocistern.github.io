@@ -3115,7 +3115,7 @@ order: 6
           }
 
           function filterClick(dict, table, col, keyword, element){
-            (ischecked = $(element).is(':checked')) ? console.log("hi")/*addDict(dict, col, keyword)*/ : removeFromDict(dict, col, keyword);
+            (ischecked = $(element).is(':checked')) ? addDict(dict, col, keyword) : removeFromDict(dict, col, keyword);
             filtAll(dict);
             table.draw();
           }
