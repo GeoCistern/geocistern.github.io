@@ -3023,7 +3023,7 @@ order: 6
           /*all category buttons i think */
           $('.label-checkbox').each( function () {
             var dash = $(this).attr('id').indexOf("-");
-            $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0,dash), $(this).attr('id')) )
+            $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0,dash), '#'+ $(this).attr('id') + ' input:checkbox') )
           });
 
 
@@ -3115,7 +3115,7 @@ order: 6
           }
 
           function filterClick(dict, table, col, keyword, element){
-            (ischecked = $(element).is(':checked')) ? addDict(dict, col, keyword) : removeFromDict(dict, col, keyword);
+            ($(element).is(':checked')) ? addDict(dict, col, keyword) : removeFromDict(dict, col, keyword);
             filtAll(dict);
             table.draw();
           }
@@ -3170,5 +3170,4 @@ order: 6
 
     </script>
 
-  </body>
- </html>
+
