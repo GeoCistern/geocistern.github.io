@@ -3023,6 +3023,14 @@ order: 5
           /*all category buttons i think */
           $('.label-checkbox').each( function () {
             var dash = $(this).attr('id').indexOf("-");
+            /*Accounting for the exception where two genres could be listed*/
+            if (parseInt($(this).attr('id').slice(dash+1)) == 13){
+              if ($(this).attr('id').indexOf(';') != -1){
+                var semicolon = $(this).attr('id').indexOf(';');
+                $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0, semicolon), '#'+ $(this).attr('id') + ' input:checkbox') )
+                $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(semicolon+1, dash), '#'+ $(this).attr('id') + ' input:checkbox') )
+              }
+            }
             $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0,dash), '#'+ $(this).attr('id') + ' input:checkbox') )
           });
 
