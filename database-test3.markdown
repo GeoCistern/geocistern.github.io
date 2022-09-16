@@ -2997,9 +2997,9 @@ order: 5
           }
         });
 
-       /* columm 8 only has ottoman translation so fix it so it routes to that even if a diff language -- i think this should work but fix undefined */
-   function changeLanguage(index){
-     $('#genre-menu-here').empty();
+       /* columm 8 only has ottoman translation so it routes to that even if a diff language */
+     function changeLanguage(index){
+      $('#genre-menu-here').empty();
       for (var i = 1; i< genres.length; i++){
           document.getElementById("genre-menu-here").innerHTML += `<label class="label-checkbox" id="${genres[i][0]}-8"><input type="checkbox"><span>`+ genres[i][index] + '</span></label>';    
         }
@@ -3027,8 +3027,10 @@ order: 5
             if (parseInt($(this).attr('id').slice(dash+1)) == 13){
               if ($(this).attr('id').indexOf(';') != -1){
                 var semicolon = $(this).attr('id').indexOf(';');
-                $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0, semicolon), '#'+ $(this).attr('id') + ' input:checkbox') )
-                $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(semicolon+1, dash), '#'+ $(this).attr('id') + ' input:checkbox') )
+                $(this).change( () => {
+                  filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0, semicolon), '#'+ $(this).attr('id') + ' input:checkbox');
+                  filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(semicolon+2, dash), '#'+ $(this).attr('id') + ' input:checkbox');
+                }
               }
             }
             $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0,dash), '#'+ $(this).attr('id') + ' input:checkbox') )
