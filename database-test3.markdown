@@ -3030,7 +3030,7 @@ order: 5
                 $(this).change( () => {
                   filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0, semicolon), '#'+ $(this).attr('id') + ' input:checkbox');
                   filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(semicolon+2, dash), '#'+ $(this).attr('id') + ' input:checkbox');
-                }
+                })
               }
             }
             $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0,dash), '#'+ $(this).attr('id') + ' input:checkbox') )
