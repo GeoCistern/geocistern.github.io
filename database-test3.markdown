@@ -108,6 +108,10 @@ order: 5
           display: table;
         }
 
+        .filter-category{
+
+        }
+
 
     </style>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
@@ -147,17 +151,17 @@ order: 5
     <div class="clearfix">
     <div class="sidebar" id="sidebar">
       <h1>Filter By:</h1>
-        <div id="filter-type" class="filter-stuff">
+        <div id="filter-type" class="filter-category">
           <h2>Type:</h2>
         </div>
-        <div id="lang">
+        <div id="lang" class="filter-category">
           <h2>Language:</h2>
         </div>
-        <div id="script">
+        <div id="script" class="filter-category">
           <h2>Script:</h2>
         </div>
 
-        <div id="filter-genres">
+        <div id="filter-genres" class="filter-category">
           <h2>Genre:</h2>
           <label id="dropdown">Genre -- Choose a language:</label>
           <select name="genres" id="genres">
@@ -2978,9 +2982,9 @@ order: 5
       for (var i = 0; i< script.length; i++){
         document.getElementById("script").innerHTML += `<label class="label-checkbox" id="${script[i]}-13"><input type="checkbox"><span>`+ script[i] + '</span></label>';    
       }
+      var genres = [['Ottoman Keyword', 'Arabic Keyword ', 'Modern Turkish Keyword', 'English Keyword', 'French Keyword'], ['‘Acâ’ib', 'عجائب', 'Hayret verici şeyler', 'Wonders', 'Merveilles'], ['‘Acâibnâme', 'عجائبنامه', 'Hayret Verici Şeyler Kitabi', 'Book of Wonders', 'Livre des Merveilles '], ['‘Avd', 'عود', 'Iade', 'Return', 'Retour '], ['‘İbret-nümâ', 'عبرتنامه', 'İbret Kitabı', 'The Book of Lessons/Advices', 'Livre de Leçon'], ['A‘lâm (sing. Âlem)', 'أعلام', 'Alemler', 'worlds', 'Mondes'], ['A‘vân', 'أعوان', 'Zaman', 'Time', 'Temps'], ['Acâ’ib al-Arz va’l-Buldân', 'عجائب الأرض والبلدان', "Arz ve Ülkelerr'in Hayret Verici Şeyler", 'Wonders of the Earth and the Countries', 'Merveilles de la Terre et des États'], ['Acâ’ib al-Mahlükât; ‘Acâ’ib al-Mahlûkât', 'عجائب المخلوقات', 'Yaratılmış Garip, Harika Şeyler, Kozmoğrafya', 'Wonders of Creation, Cosmography', 'Merveilles de la Creation, Cosmographie'], ['Afrika', '', 'Afrika', 'Africa', "l'Afrique"], ['Ahbâr', 'أخبار', 'Ahbar, Haberler ', 'Chronicle ', 'Chronique '], ['âhval', 'أحوال', 'Durumlar/Haberler', 'Events, Situations', 'Evénement'], ['Ahval; Ahvâl', 'أحوال', 'Rehnümâ', 'Conditions', 'Conditions '], ['al-İşârât ', 'الإشارات', 'Işaretler ', 'Landmarks', 'Points de repère'], ['Amelî', 'عملي', 'Uygulamalı', 'applied', 'Pratique'], ['Amerika', '', 'Amerika', 'America', "l'Amérique"], ['Amsâr', 'أمصار', 'Bölgeler ', 'Territories', 'Territoires '], ['Arazî', 'أراضي', 'Arazi', 'Lands', 'Terres '], ['Arz', 'أرض', 'Yeryüzü', 'Earth', 'Terre'], ['Askeri', 'عسكري', 'Askeri', 'Military', 'Militaire'], ['Asya', '', 'Asya', 'Asia', "l'Asie"], ['Atlas', 'أطلس', 'Atlas', 'Atlas', 'Atlas '], ['Atlaslı Coğrafya', 'آطلسلي جغرافيا', 'Atlaslı Coğrafya', 'Geography with atlas', 'Géographie avec atlas'], ['Avrupa', '', 'Avrupa', 'Europe', "l'Europe"], ['Beyân', 'بيان', 'İfade etme/Bildirme', 'Statement', 'Déclaration'], ['Bilâd', 'بلاد', 'Beldeler', 'Lands/Countries/Towns', 'Pays/Villes'], ['Ceb', 'جيب', 'Cep', 'Pocket', 'Poche'], ['Cevelan', 'جولان', 'Gezinti', 'Travel', 'Voyage'], ['Cihan', 'جهان', 'Cihan', 'World', 'Monde'], ['Cihannümâ', 'جهاننما', 'Dünya Kitabı', 'Book of the World', 'Livre du Monde '], ['Coğrafya', 'جغرافية', 'Coğrafya', 'Geography', 'Géographie'], ['Coğrafya Muallimi', 'جغرافيا معلمي', 'Coğrafya Öğretmeni', 'Geography teacher', 'Enseignant de géographie'], ['Dağ', 'داغ', 'Dağ', 'Mountain', 'Montagne'], ['Dalil; Dalîl', 'دليل', 'Rehber ', 'Guide', 'Guide'], ['Demiryolu', 'دميريول', 'Demiryolu', 'Railroad', 'Chemin de fer'], ['Deniz Kitabı', 'كتاب بحري', 'Deniz Kitabı', 'Book of the Sea', 'Livre de la Mer '], ['Derya', 'دريا', 'Deniz', 'Sea', 'Mer'], ['Dirâsat', 'دراسة', 'Bahslar ', 'Studies ', 'Études'], ['Dîvân', 'ديوان', 'Antoloji', 'Anthology', 'Anthologie '], ['Esmâ-i Bilâd', 'أسماء البلاد', 'Ülkelerin Isimler', 'Names of Countries ', 'Noms des Pays '], ['Fenn', 'فن', 'Bİlim/Bilgi', 'Science/Knowledge', 'Science/Savoir'], ['Fenni', 'فني', 'Bilimsel', 'Scientific/technical', 'Scientifique'], ['Fezleke', 'فذلكه', 'Özet', 'Summary ', 'Resumé'], ['Garâ’ib', 'غرائب', 'Tuhaf, garip şeyler', 'Wonders ', 'Merveilles'], ['Garâ’ib al-Mavcüdât', 'غرائب الموجودات', 'Garip Vücutlar', 'Wonders of Beings ', 'Merveilles des Êtres '], ['Güzergah', 'كذركاهي', 'Güzergah', 'Route', 'Route'], ['Harita hocası', 'خريطه خواجه سي', 'Harita Hocası', 'Map Teacher', 'Enseignant de Carte'], ['Harita; Harîta', 'خريطة', 'Harita', 'Map', 'Map'], ['Haritalar', 'خريطه لر', 'Haritalar', 'Maps', 'Maps'], ['Hey’et', 'هيئة', 'Vücut', 'Body', 'Corps '], ['Hikâyât', 'حكايات', 'Hikayeler', 'Stories', 'Histoires'], ['Hikemî', 'حكمي', 'Felsefi', 'Philosophical', 'Philosophique'], ['Hıtây-nâme', 'خطاي نامه', 'Hitayname', 'Travel Record ', 'Relation de Voyage'], ['Hulâsa', 'خلاصة', 'Özet', 'Summary ', 'Résumé'], ['İklîm-nâme', 'إقليمنامه', 'Bölge Kitabı', 'Book of Region', 'Livre de Region '], ['İktisad', 'إقتصاد', 'Ekonomi', 'Economy', 'Economie'], ['ilm', 'علم', 'ilm', 'Science/Knowledge', 'Science/Savoir'], ['İstatistik', 'استاتيستيق', 'İstatistik', 'Statistics', 'Statisque'], ['Îstatistikî', 'استاتيستيقي', 'İstatistiksel', 'Statistical', 'Statisque'], ['İsti‘lâm', 'استعلام', 'Anket', 'Survey', 'Enquête'], ['Kabartma harita', 'قبارتما خريطه', 'Kabartma harita', 'Relief Map', 'Carte en relief'], ['Kadîm', 'قديم', 'Eski', 'Old', 'Ancien'], ['Kânun', 'قانون', 'Kanun', 'Law', 'Loi'], ['Kitâb; Kitab', 'كتاب', 'Kitap', 'Book ', 'Livre'], ['Kısm', 'قسم', 'Kısım', 'Part', 'Partie'], ['Kıtaât-ı Hamse', 'قطعات خمسه', 'Beş kıta', 'Five Continents', 'Cinq Continents'], ['Kroki', 'قروقي', 'Kroki', 'Sketch', 'Croquis'], ['Küçük Coğrafya', 'جغرافية صغيرة', 'Küçük Coğrafya', 'Small geography', 'Petit Géographie'], ['Küre-i Arz', 'الكرة الأرضية', 'Yerküre', 'Terrestrial globe', 'Globe terrestre'], ['Lâyiha', 'لايحه', 'Tasarı', 'Statement', 'Déclaration'], ['Lügat', 'لغت', 'Sözlük', 'Dictionary', 'Dictionaire'], ['Ma‘rifat', 'معرفة', 'Bilgi', 'Knowlegde ', 'Connaissance '], ['Macmü’at', 'مجموعة', 'Mecmua', 'Collection', 'Collection '], ['Madhal', 'مدخل', 'Giriş', 'Introduction ', 'Introduction'], ['Malûmât', 'معلومات', 'Haberler/Bilgi', 'News/Information', 'Information'], ['Mamâlik', 'ممالك', 'Memleket/Memleketler', 'Countries/Lands', 'Pays '], ['Manâsik al-Masâlik', 'مناسك المسالك', 'Ritüel', 'Rite', 'Rituel '], ['Manâzil', 'منازل', 'Menziller ', 'Transportations', 'Transport'], ['Manazir', 'مناظر', 'Görünümler', 'Views', 'Vues '], ['Mebâdi', 'مبادئ', 'Mebdeler', 'Principles', 'Principes '], ['Memâlik-i Mahrüsa-ı Şâhâne', 'ممالك محروسهء شاهانه', 'Korunmuş Memleketler (Osmanlı İmparatorluğu)', 'The Well-Protected Domains', '?'], ['Memâlik-i Osmaniye', 'ممالك عثمانية', 'Osmanlı Toprakları', 'Ottoman Lands', 'Terres Ottomanes'], ['Menzilnâme', 'منزلنامه', 'Menzil Kitabı', 'Book of Transportation ', 'Livre de Transport '], ['Merâhil', 'مراحل', 'Aşama ', 'Stages', 'Étapes'], ['Mesafe', 'مسافه', 'Mesafe', 'Distance', 'Distance'], ['Millî', 'ملي', 'Milli', 'National', 'National'], ["Mir'at-ül Coğrafya", 'مرآت جغرافيا', 'Coğrafya aynası', 'The mirror of geography', 'Mirroire de Géographie'], ['Mir’ât', 'مرآت', 'Ayna', 'Mirror', 'Miroir'], ['Mir’ât al-Kâinât', 'مرآت الكائنات', 'Kainat Aynası', 'Mirror of the Universe', "Mirroir de l'Univers"], ['Mücmel', 'مجمل', 'Öz/Kısa/Kısaltılmış', 'Succinct', 'Concis'], ['Mufassal', 'مفصّل', 'Memleketler', 'States', 'États '], ['Mufradat', 'مفردات', 'Ifadeler ', 'Expressions', 'Expréssions '], ['Muhît', 'محيط', 'Çevre', 'Surroundings', 'Alentours'], ['Muhtasar', 'مختصر', 'Kısa/Özet', 'Abridged', 'abrégé'], ['Mukaddime', 'مقدمة', 'Giriş', 'Introduction ', 'Introduction'], ['Mükemmel', 'مكمل', 'Mükemmel', 'Perfect/Complete', 'Parfait/Total'], ['Mülahhas', 'ملخص', 'Özet', 'Summary ', 'Resumé'], ['Münşaât', 'منشآت', 'Inşaatlar', 'Constructions', 'Constructions '], ['Musahabe', 'مصاحبة', 'Konuşma', 'Discussions', 'Debats'], ['Musavver', 'مصور', 'Resimli', 'Illustrated', 'Illustré'], ['Mutâlaât', 'مطالعة', 'Düşünceler', 'Thoughts', 'Pensées'], ['Müzekkire', 'مذكرة', 'Inceleme Yazısı', 'Memoir', 'Mémoire'], ['Nazari', 'نظري', 'Kuramsal', 'theoretical', 'Théorique'], ['Okyanusya', '', 'Okyanusya', 'Oceania', "L'Océanie"], ['Ordu', 'أوردي', 'Ordu', 'Army', 'Armée'], ['Orta', '', 'Orta', 'Middle', 'Intermédiaire'], ['Osmânî', 'عثماني', 'Osmanlı', 'Ottoman', 'Ottomane'], ['Osmaniye', 'عثمانيه', 'Osmanlı', 'Ottoman', 'Ottomane'], ['Ravzat', 'روضة', 'Bahçeler', 'Gardens', 'Jardins'], ['Rehber', 'رهبر', 'Rehber ', 'Guide', 'Guide'], ['Rehnümâ', 'رهنما', 'Kılavuz', 'Guide', 'Guide'], ['Resimli', 'رسملي', 'Resimli', 'Illustrated', 'Illustré'], ['Rihla', 'رحلة', 'Seyahat', 'Travel', 'Voyage'], ['Risale; Risâla', 'رسالة', 'Risale', 'Treatise', 'Traité'], ['Rivâyât', 'روايات', 'Rivayetler', 'Hearsay', 'Ouï-dire'], ['Sefaretnâme; Sefaret-nâme', 'سفارتنامه', 'Elçilik Kitabı', 'Book of Travels, Ambassadorial Report', "Relation de Voyage, Rapport d'ambassadeur"], ['Sefer', 'سفر', 'Sefer', 'Expedition', 'Expédition'], ['Şekilli', 'شكللي', 'Şekilli', 'Illustrated', 'Illustré'], ['Seyahat', 'سياحة/سياحت', 'seyahat', 'Travel', 'Voyage'], ['Seyahatname', 'سياحتنامه', 'Seyahat Kitabı', 'Book of Travels', 'Relation de Voyage'], ['Sira', 'سيرة', 'Biografi', 'Biography', 'Biographie'], ['Sualli ve Cevaplı', 'سؤاللي وجوابلي', 'Soru ve cevaplı', 'Questions and answers', 'Questions et Réponses'], ['Ta’rif ve Evsafı', 'تعريف وأوصافي', 'Tarif ve Evsafı', 'Description and Characteristics', 'Description et Characteristiques '], ['Tahdit', '', 'Sınırlandırma', 'Delimitation', 'Délimitation'], ['Tahsîl', 'تحصيل', 'Eğitim', 'Education', 'Education'], ['Taksim', 'تقسيم', 'Bölme', 'Partition', 'Partition'], ['Talhîs; Telhıs', 'تلخيص', 'Özet', 'Summary ', 'Sommaire '], ['Tarcamat', '', 'Çeviriler', 'Translations', 'Traduction'], ['Târîfât', 'تعريفات', 'Tariflar', 'Descriptions', 'Descriptions'], ['Tarih', 'تاريخ', 'Tarih ', 'History', 'Histoire '], ['Tastîh', 'تسطيح', 'Düzleme yansıtma', 'projection (on a plane)', 'projection'], ['Tazkirat', 'تذكرة', 'Inceleme Yazısı', 'Memoir', 'Mémoire'], ['Tedkîkât', 'تدقيقات', 'Tetkikler', 'Survey', 'étude'], ['Tedris', 'تدريس', 'Öğretim', 'Teaching', 'Enseignement'], ['Terceme', 'ترجمة', 'Tercüme', 'Translation', 'Traduction '], ['Tersim', 'ترسيم', 'Resmini yapma', 'Sketching/Drawing', 'Esquisse (?)'], ['Tıbbî', 'طبّي', 'Tıbbii', 'Medical', 'Médical'], ['Topografya', 'طپوغرافيا', 'Topografya', 'Topography', 'Topographie'], ['Tuhfat', 'تحفة', 'Şaheserler', 'Masterpieces ', "Chef-d'oeuvres"], ['Umûmî', 'عمومي', 'Genel', 'General', 'général'], ['Umûmî Atlas', 'عمومي آطلس', 'Genel atlas', 'General atlas', 'Atlas Général'], ['Usûl', 'أصول', 'Yöntem', 'Method', 'Méthode'], ['Vatanî', 'وطني', 'Vatanla İlgili', 'National', 'National'], ['Vilayet', 'ولايت', 'Vilayet', 'Province', 'Province'], ['Yazısız Harita Defteri', 'يازيسز خريطه دفتري', 'Yazısız Harita Defteri', 'Unlettered/blank Map Notebook', 'Livre de carte Illetrée'], ['Yeni', 'يكي', 'Yeni', 'New', 'Nouveau'], ['Yürüyüş', 'يورييوش ', 'Yürüyüş', 'Walking', 'Marche'], ['Zamân', 'زمان', 'Zaman', 'Time', 'Temps'], ['Ziraat', 'زراعت', 'Ziraat', 'Agriculture', 'Agriculture'], ['Ziyârât', 'زيارات', 'Ziyaretler', 'Sacred Site Visits (Pilgrimage)', 'Voyage/Pélerinage'], ['Zubdat', 'زبدة', 'Özet', 'Summary ', 'Sommaire ']]
 
-      var genres = [['Ottoman Keyword', 'Arabic Keyword ', 'Modern Turkish Keyword', 'English Keyword', 'French Keyword'], ['‘Acâ’ib', 'عجائب', 'Hayret verici şeyler', 'Wonders', 'Merveilles'], ['‘Acâibnâme', 'عجائبنامه', 'Hayret Verici Şeyler Kitabi', 'Book of Wonders', 'Livre des Merveilles '], ['‘Avd', 'عود', 'Iade', 'Return', 'Retour '], ['‘İbret-nümâ', 'عبرتنامه', 'İbret Kitabı', 'The Book of Lessons/Advices', 'Livre de Leçon'], ['A‘lâm (sing. Âlem)', 'أعلام', 'Alemler', 'worlds', 'Mondes'], ['A‘vân', 'أعوان', 'Zaman', 'Time', 'Temps'], ['Acâ’ib al-Arz va’l-Buldân', 'عجائب الأرض والبلدان', "Arz ve Ülkelerr'in Hayret Verici Şeyler", 'Wonders of the Earth and the Countries', 'Merveilles de la Terre et des États'], ['Acâ’ib al-Mahlükât; ‘Acâ’ib al-Mahlûkât', 'عجائب المخلوقات', 'Yaratılmış Garip, Harika Şeyler, Kozmoğrafya', 'Wonders of Creation, Cosmography', 'Merveilles de la Creation, Cosmographie'], ['Afrika', '', 'Afrika', 'Africa', "l'Afrique"], ['Ahbâr', 'أخبار', 'Ahbar, Haberler ', 'Chronicle ', 'Chronique '], ['âhval', 'أحوال', 'Durumlar/Haberler', 'Events, Situations', 'Evénement'], ['Ahval; Ahvâl', 'أحوال', 'Rehnümâ', 'Conditions', 'Conditions '], ['al-İşârât ', 'الإشارات', 'Işaretler ', 'Landmarks', 'Points de repère'], ['Amelî', 'عملي', 'Uygulamalı', 'applied', 'Pratique'], ['Amerika', '', 'Amerika', 'America', "l'Amérique"], ['Amsâr ', 'أمصار', 'Bölgeler ', 'Territories', 'Territoires '], ['Arazî', 'أراضي', 'Arazi', 'Lands', 'Terres '], ['Arz', 'أرض', 'Yeryüzü', 'Earth', 'Terre'], ['Askeri', 'عسكري', 'Askeri', 'Military', 'Militaire'], ['Asya', '', 'Asya', 'Asia', "l'Asie"], ['Atlas', 'أطلس', 'Atlas', 'Atlas', 'Atlas '], ['Atlaslı Coğrafya', 'آطلسلي جغرافيا', 'Atlaslı Coğrafya', 'Geography with atlas', 'Géographie avec atlas'], ['Avrupa', '', 'Avrupa', 'Europe', "l'Europe"], ['Beyân', 'بيان', 'İfade etme/Bildirme', 'Statement', 'Déclaration'], ['Bilâd', 'بلاد', 'Beldeler', 'Lands/Countries/Towns', 'Pays/Villes'], ['Ceb', 'جيب', 'Cep', 'Pocket', 'Poche'], ['Cevelan', 'جولان', 'Gezinti', 'Travel', 'Voyage'], ['Cihan', 'جهان', 'Cihan', 'World', 'Monde'], ['Cihannümâ', 'جهاننما', 'Dünya Kitabı', 'Book of the World', 'Livre du Monde '], ['Coğrafya ', 'جغرافية', 'Coğrafya', 'Geography', 'Géographie'], ['Coğrafya Muallimi', 'جغرافيا معلمي', 'Coğrafya Öğretmeni', 'Geography teacher', 'Enseignant de géographie'], ['Dağ', 'داغ', 'Dağ', 'Mountain', 'Montagne'], ['Dalil; Dalîl', 'دليل', 'Rehber ', 'Guide', 'Guide'], ['Demiryolu', 'دميريول', 'Demiryolu', 'Railroad', 'Chemin de fer'], ['Deniz Kitabı', 'كتاب بحري', 'Deniz Kitabı', 'Book of the Sea', 'Livre de la Mer '], ['Derya', 'دريا', 'Deniz', 'Sea', 'Mer'], ['Dirâsat ', 'دراسة', 'Bahslar ', 'Studies ', 'Études'], ['Dîvân ', 'ديوان', 'Antoloji', 'Anthology', 'Anthologie '], ['Esmâ-i Bilâd', 'أسماء البلاد', 'Ülkelerin Isimler', 'Names of Countries ', 'Noms des Pays '], ['Fenn', 'فن', 'Bİlim/Bilgi', 'Science/Knowledge', 'Science/Savoir'], ['Fenni', 'فني', 'Bilimsel', 'Scientific/technical', 'Scientifique'], ['Fezleke', 'فذلكه', 'Özet', 'Summary ', 'Resumé'], ['Garâ’ib', 'غرائب', 'Tuhaf, garip şeyler', 'Wonders ', 'Merveilles'], ['Garâ’ib al-Mavcüdât', 'غرائب الموجودات', 'Garip Vücutlar', 'Wonders of Beings ', 'Merveilles des Êtres '], ['Güzergah', 'كذركاهي', 'Güzergah', 'Route', 'Route'], ['Harita hocası', 'خريطه خواجه سي', 'Harita Hocası', 'Map Teacher', 'Enseignant de Carte'], ['Harita; Harîta', 'خريطة', 'Harita', 'Map', 'Map'], ['Haritalar', 'خريطه لر', 'Haritalar', 'Maps', 'Maps'], ['Hey’et', 'هيئة', 'Vücut', 'Body', 'Corps '], ['Hikâyât', 'حكايات', 'Hikayeler', 'Stories', 'Histoires'], ['Hikemî', 'حكمي', 'Felsefi', 'Philosophical', 'Philosophique'], ['Hıtây-nâme', 'خطاي نامه', 'Hitayname', 'Travel Record ', 'Relation de Voyage'], ['Hulâsa', 'خلاصة', 'Özet', 'Summary ', 'Résumé'], ['İklîm-nâme', 'إقليمنامه', 'Bölge Kitabı', 'Book of Region', 'Livre de Region '], ['İktisad', 'إقتصاد', 'Ekonomi', 'Economy', 'Economie'], ['ilm', 'علم', 'ilm', 'Science/Knowledge', 'Science/Savoir'], ['İstatistik', 'استاتيستيق', 'İstatistik', 'Statistics', 'Statisque'], ['Îstatistikî', 'استاتيستيقي', 'İstatistiksel', 'Statistical', 'Statisque'], ['İsti‘lâm', 'استعلام', 'Anket', 'Survey', 'Enquête'], ['Kabartma harita', 'قبارتما خريطه', 'Kabartma harita', 'Relief Map', 'Carte en relief'], ['Kadîm', 'قديم', 'Eski', 'Old', 'Ancien'], ['Kânun', 'قانون', 'Kanun', 'Law', 'Loi'], ['Kitâb; Kitab', 'كتاب', 'Kitap', 'Book ', 'Livre'], ['Kısm', 'قسم', 'Kısım', 'Part', 'Partie'], ['Kıtaât-ı Hamse', 'قطعات خمسه', 'Beş kıta', 'Five Continents', 'Cinq Continents'], ['Kroki', 'قروقي', 'Kroki', 'Sketch', 'Croquis'], ['Küçük Coğrafya', 'جغرافية صغيرة', 'Küçük Coğrafya', 'Small geography', 'Petit Géographie'], ['Küre-i Arz', 'الكرة الأرضية', 'Yerküre', 'Terrestrial globe', 'Globe terrestre'], ['Lâyiha', 'لايحه', 'Tasarı', 'Statement', 'Déclaration'], ['Lügat', 'لغت', 'Sözlük', 'Dictionary', 'Dictionaire'], ['Ma‘rifat', 'معرفة', 'Bilgi', 'Knowlegde ', 'Connaissance '], ['Macmü’at', 'مجموعة', 'Mecmua', 'Collection', 'Collection '], ['Madhal ', 'مدخل', 'Giriş', 'Introduction ', 'Introduction'], ['Malûmât', 'معلومات', 'Haberler/Bilgi', 'News/Information', 'Information'], ['Mamâlik', 'ممالك', 'Memleket/Memleketler', 'Countries/Lands', 'Pays '], ['Manâsik al-Masâlik', 'مناسك المسالك', 'Ritüel', 'Rite', 'Rituel '], ['Manâzil', 'منازل', 'Menziller ', 'Transportations', 'Transport'], ['Manazir', 'مناظر', 'Görünümler', 'Views', 'Vues '], ['Mebâdi', 'مبادئ', 'Mebdeler', 'Principles', 'Principes '], ['Memâlik-i Mahrüsa-ı Şâhâne', 'ممالك محروسهء شاهانه', 'Korunmuş Memleketler (Osmanlı İmparatorluğu)', 'The Well-Protected Domains', '?'], ['Memâlik-i Osmaniye', 'ممالك عثمانية', 'Osmanlı Toprakları', 'Ottoman Lands', 'Terres Ottomanes'], ['Menzilnâme', 'منزلنامه', 'Menzil Kitabı', 'Book of Transportation ', 'Livre de Transport '], ['Merâhil', 'مراحل', 'Aşama ', 'Stages', 'Étapes'], ['Mesafe', 'مسافه', 'Mesafe', 'Distance', 'Distance'], ['Millî', 'ملي', 'Milli', 'National', 'National'], ["Mir'at-ül Coğrafya", 'مرآت جغرافيا', 'Coğrafya aynası', 'The mirror of geography', 'Mirroire de Géographie'], ['Mir’ât', 'مرآت', 'Ayna', 'Mirror', 'Miroir'], ['Mir’ât al-Kâinât', 'مرآت الكائنات', 'Kainat Aynası', 'Mirror of the Universe', "Mirroir de l'Univers"], ['Mücmel', 'مجمل', 'Öz/Kısa/Kısaltılmış', 'Succinct', 'Concis'], ['Mufassal', 'مفصّل', 'Memleketler', 'States', 'États '], ['Mufradat', 'مفردات', 'Ifadeler ', 'Expressions', 'Expréssions '], ['Muhît', 'محيط', 'Çevre', 'Surroundings', 'Alentours'], ['Muhtasar', 'مختصر', 'Kısa/Özet', 'Abridged', 'abrégé'], ['Mukaddime', 'مقدمة', 'Giriş', 'Introduction ', 'Introduction'], ['Mükemmel', 'مكمل', 'Mükemmel', 'Perfect/Complete', 'Parfait/Total'], ['Mülahhas', 'ملخص', 'Özet', 'Summary ', 'Resumé'], ['Münşaât', 'منشآت', 'Inşaatlar', 'Constructions', 'Constructions '], ['Musahabe', 'مصاحبة', 'Konuşma', 'Discussions', 'Debats'], ['Musavver', 'مصور', 'Resimli', 'Illustrated', 'Illustré'], ['Mutâlaât', 'مطالعة', 'Düşünceler', 'Thoughts', 'Pensées'], ['Müzekkire', 'مذكرة', 'Inceleme Yazısı', 'Memoir', 'Mémoire'], ['Nazari', 'نظري', 'Kuramsal', 'theoretical', 'Théorique'], ['Okyanusya', '', 'Okyanusya', 'Oceania', "L'Océanie"], ['Ordu', 'أوردي', 'Ordu', 'Army', 'Armée'], ['Orta', '', 'Orta', 'Middle', 'Intermédiaire'], ['Osmânî', 'عثماني', 'Osmanlı', 'Ottoman', 'Ottomane'], ['Osmaniye', 'عثمانيه', 'Osmanlı', 'Ottoman', 'Ottomane'], ['Ravzat', 'روضة', 'Bahçeler', 'Gardens', 'Jardins'], ['Rehber', 'رهبر', 'Rehber ', 'Guide', 'Guide'], ['Rehnümâ', 'رهنما', 'Kılavuz', 'Guide', 'Guide'], ['Resimli', 'رسملي', 'Resimli', 'Illustrated', 'Illustré'], ['Rihla', 'رحلة', 'Seyahat', 'Travel', 'Voyage'], ['Risale; Risâla', 'رسالة', 'Risale', 'Treatise', 'Traité'], ['Rivâyât', 'روايات', 'Rivayetler', 'Hearsay', 'Ouï-dire'], ['Sefaretnâme; Sefaret-nâme; Sefâretnâme', 'سفارتنامه', 'Elçilik Kitabı', 'Book of Travels, Ambassadorial Report', "Relation de Voyage, Rapport d'ambassadeur"], ['Sefer', 'سفر', 'Sefer', 'Expedition', 'Expédition'], ['Şekilli', 'شكللي', 'Şekilli', 'Illustrated', 'Illustré'], ['Seyahat', 'سياحة/سياحت', 'seyahat', 'Travel', 'Voyage'], ['Seyahatname', 'سياحتنامه', 'Seyahat Kitabı', 'Book of Travels', 'Relation de Voyage'], ['Sira ', 'سيرة', 'Biografi', 'Biography', 'Biographie'], ['Sualli ve Cevaplı', 'سؤاللي وجوابلي', 'Soru ve cevaplı', 'Questions and answers', 'Questions et Réponses'], ['Ta’rif ve Evsafı', 'تعريف وأوصافي', 'Tarif ve Evsafı', 'Description and Characteristics', 'Description et Characteristiques '], ['Tahdit', '', 'Sınırlandırma', 'Delimitation', 'Délimitation'], ['Tahsîl', 'تحصيل', 'Eğitim', 'Education', 'Education'], ['Taksim', 'تقسيم', 'Bölme', 'Partition', 'Partition'], ['Talhîs; Telhıs', 'تلخيص', 'Özet', 'Summary ', 'Sommaire '], ['Tarcamat', '', 'Çeviriler', 'Translations', 'Traduction'], ['Târîfât', 'تعريفات', 'Tariflar', 'Descriptions', 'Descriptions'], ['Tarih ', 'تاريخ', 'Tarih ', 'History', 'Histoire '], ['Tastîh', 'تسطيح', 'Düzleme yansıtma', 'projection (on a plane)', 'projection'], ['Tazkirat', 'تذكرة', 'Inceleme Yazısı', 'Memoir', 'Mémoire'], ['Tedkîkât', 'تدقيقات', 'Tetkikler', 'Survey', 'étude'], ['Tedris', 'تدريس', 'Öğretim', 'Teaching', 'Enseignement'], ['Terceme ', 'ترجمة', 'Tercüme', 'Translation', 'Traduction '], ['Tersim', 'ترسيم', 'Resmini yapma', 'Sketching/Drawing', 'Esquisse (?)'], ['Tıbbî', 'طبّي', 'Tıbbii', 'Medical', 'Médical'], ['Topografya', 'طپوغرافيا', 'Topografya', 'Topography', 'Topographie'], ['Tuhfat', 'تحفة', 'Şaheserler', 'Masterpieces ', "Chef-d'oeuvres"], ['Umûmî', 'عمومي', 'Genel', 'General', 'général'], ['Umûmî Atlas', 'عمومي آطلس', 'Genel atlas', 'General atlas', 'Atlas Général'], ['Usûl', 'أصول', 'Yöntem', 'Method', 'Méthode'], ['Vatanî', 'وطني', 'Vatanla İlgili', 'National', 'National'], ['Vilayet', 'ولايت', 'Vilayet', 'Province', 'Province'], ['Yazısız Harita Defteri', 'يازيسز خريطه دفتري', 'Yazısız Harita Defteri', 'Unlettered/blank Map Notebook', 'Livre de carte Illetrée'], ['Yeni', 'يكي', 'Yeni', 'New', 'Nouveau'], ['Yürüyüş', 'يورييوش ', 'Yürüyüş', 'Walking', 'Marche'], ['Zamân', 'زمان', 'Zaman', 'Time', 'Temps'], ['Ziraat', 'زراعت', 'Ziraat', 'Agriculture', 'Agriculture'], ['Ziyârât', 'زيارات', 'Ziyaretler', 'Sacred Site Visits (Pilgrimage)', 'Voyage/Pélerinage'], ['Zubdat', 'زبدة', 'Özet', 'Summary ', 'Sommaire ']]
-
+      /*This does not match. I dont know why it works.*/
       $("#genres").on('change', function (){
           if ($(this).val() == "ottoman"){
                changeLanguage(0);
@@ -2997,13 +3001,19 @@ order: 5
           }
         });
 
-       /* columm 8 only has ottoman translation so it routes to that even if a diff language */
-     function changeLanguage(index){
-      $('#genre-menu-here').empty();
-      for (var i = 1; i< genres.length; i++){
-          document.getElementById("genre-menu-here").innerHTML += `<label class="label-checkbox" id="${genres[i][0]}-8"><input type="checkbox"><span>`+ genres[i][index] + '</span></label>';    
+        /* columm 8 only has ottoman translation so it routes to that even if a diff language */
+
+        function changeLanguage(index){
+        	for (var i = 1; i < genres.length; i++){
+         	document.getElementById(`${genres[i][0]}-8`).innerHTML = `<label class="label-checkbox" id="${genres[i][0]}-8"><input type="checkbox"><span>`+ genres[i][index] + '</span></label>';
+         }
         }
-     }
+
+        /* genres defaults w/ ottoman to start */
+       for (var i = 1; i< genres.length; i++){
+               document.getElementById("genre-menu-here").innerHTML += `<label class="label-checkbox" id="${genres[i][0]}-8"><input type="checkbox"><span>`+ genres[i][0] + '</span></label>';
+
+             }
 
      $(document).ready(function () {
              var table = $('#myTable').DataTable({
@@ -3020,26 +3030,37 @@ order: 5
 
           var dict = {};
 
-          /*all category buttons i think */
+            /*All category buttons
+            TWO ERRORS NEED TO BE FIXED:
+            1) ID's w/ space => script error'
+            2)';' = undefined */
+
           $('.label-checkbox').each( function () {
-            var dash = $(this).attr('id').indexOf("-");
-            /*Accounting for the exception where two genres could be listed*/
-            if (parseInt($(this).attr('id').slice(dash+1)) == 13){
+
+            var dash = $(this).attr('id').lastIndexOf("-");
+              /*Accounting for the exception where two genres could be listed - script error, figure thisout*/
+            if (parseInt($(this).attr('id').slice(dash+1)) == 8){
+
               if ($(this).attr('id').indexOf(';') != -1){
-                var semicolon = $(this).attr('id').indexOf(';');
-                $(this).change( () => {
-                  filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0, semicolon), '#'+ $(this).attr('id') + ' input:checkbox');
-                  filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(semicolon+2, dash), '#'+ $(this).attr('id') + ' input:checkbox');
-                })
+              	var semicolon = $(this).attr('id').indexOf(';');
+
+
+						/* A better way to do this exists... arrays */
+                var part1 =  $(this).attr('id').slice(0, semicolon);
+                var part2 = $(this).attr('id').slice(semicolon+2, dash);
+                $(this).change( () => filterClickMult(dict, parseInt($(this).attr('id').slice(dash+1)), part1, part2, '#'+ $(this).attr('id') + ' input:checkbox') );
+                return;
               }
+
             }
-            $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0,dash), '#'+ $(this).attr('id') + ' input:checkbox') )
+            $(this).change( () => filterClick(dict, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0,dash), '#'+ $(this).attr('id') + ' input:checkbox') );
           });
 
 
           $('#reset-filter').click( function (){
               for (var key in dict){
                 if (dict.hasOwnProperty(key)){
+                  $(dict[key] + '-' + key).checked = false;
                   delete dict[key];
                 }
               }
@@ -3130,6 +3151,20 @@ order: 5
             table.draw();
           }
 
+          /*for where there are multiple spellings in genre*/         
+          function filterClickMult(dict, col, keyword1, keyword2, element){
+           			if ($(element).is(':checked')){
+                  	addDict(dict, col, keyword1);
+                    addDict(dict, col, keyword2);
+                }
+                else{
+                    removeFromDict(dict, col, keyword1);
+                    removeFromDict(dict, col, keyword2);
+                }
+                filtAll(dict);
+                table.draw();
+           }
+
 
           function addDict(dict, key, val) {
             var subArray;
@@ -3179,5 +3214,3 @@ order: 5
 
 
     </script>
-
-
