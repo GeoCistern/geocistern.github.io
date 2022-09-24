@@ -3048,12 +3048,12 @@ order: 5
 						/* A better way to do this exists... arrays */
                 var part1 =  $(this).attr('id').slice(0, semicolon);
                 var part2 = $(this).attr('id').slice(semicolon+2, dash);
-                $(this).change( () => filterClickMult(dict, parseInt($(this).attr('id').slice(dash+1)), part1, part2, '#'+ $(this).attr('id') + ' input:checkbox') );
+                $(this).change( () => filterClickMult(dict, table, parseInt($(this).attr('id').slice(dash+1)), part1, part2, '#'+ $(this).attr('id') + ' input:checkbox') );
                 return;
               }
 
             }
-            $(this).change( () => filterClick(dict, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0,dash), '#'+ $(this).attr('id') + ' input:checkbox') );
+            $(this).change( () => filterClick(dict, table, parseInt($(this).attr('id').slice(dash+1)), $(this).attr('id').slice(0,dash), '#'+ $(this).attr('id') + ' input:checkbox') );
           });
 
 
@@ -3152,7 +3152,7 @@ order: 5
           }
 
           /*for where there are multiple spellings in genre*/         
-          function filterClickMult(dict, col, keyword1, keyword2, element){
+          function filterClickMult(dict, table, col, keyword1, keyword2, element){
            			if ($(element).is(':checked')){
                   	addDict(dict, col, keyword1);
                     addDict(dict, col, keyword2);
