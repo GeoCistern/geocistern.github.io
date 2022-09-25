@@ -8,7 +8,7 @@ order: 5
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="vwidth=device-width, initial-scale=1.0">
     <style>
         * {
           box-sizing: border-box;
@@ -186,7 +186,7 @@ order: 5
       <table id="myTable" class="dataTable-table">
         <thead>
           <tr class="headerfooter" style="text-align: right;">
-            <th></th>
+            <th>AUTHOR ID</th>
             <th>AUTHOR NAME (ORIGINAL LANGUAGE)</th>
             <th>AUTHOR NAME TRANSLITERATION</th>
             <th>TITLE ID</th>
@@ -207,29 +207,6 @@ order: 5
             <th>CONTENT LOCATION</th>
             <th>GENERAL BIBLIOGRAPHY</th>
             <th>NOTES</th>
-          </tr>
-          <tr>
-            <th>AUTHOR ID</th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
