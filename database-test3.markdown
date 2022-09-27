@@ -118,8 +118,6 @@ order: 2
   </head>
 
   <body>
-    <p id="test"></p>
-    <p id="test2"></p>
 
    <!--These go near search bar -->
     <div class="category-filter">
@@ -61721,7 +61719,6 @@ order: 2
           }
 
           function filtAll(dict) {
-           document.getElementById("test").innerHTML = JSON.stringify(dict);
 
             $.fn.dataTable.ext.search.push(function (settings, data, dataIndex){
             if (Object.keys(dict).length === 0){
