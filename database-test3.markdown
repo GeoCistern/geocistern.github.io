@@ -1,8 +1,8 @@
 ---
 layout: home
-title: Database3
-permalink: /database3/
-order: 5
+title: Database
+permalink: /database/
+order: 2
 ---
 
 <html lang="en">
