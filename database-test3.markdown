@@ -8,7 +8,7 @@ order: 5
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="vwidth=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
           box-sizing: border-box;
@@ -61583,7 +61583,7 @@ order: 5
 						/* A better way to do this exists... arrays */
                 var part1 =  $(this).attr('id').slice(0, semicolon);
                 var part2 = $(this).attr('id').slice(semicolon+2, dash);
-                $(this).change( () => filterClickMult(dict, table parseInt($(this).attr('id').slice(dash+1)), part1, part2, '#'+ $(this).attr('id') + ' input:checkbox') );
+                $(this).change( () => filterClickMult(dict, table, parseInt($(this).attr('id').slice(dash+1)), part1, part2, '#'+ $(this).attr('id') + ' input:checkbox') );
                 return;
               }
 
