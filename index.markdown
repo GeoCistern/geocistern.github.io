@@ -39,7 +39,7 @@ layout: home
   <body>
     <div style="position: relative; margin: 0 auto; width: 100%; height: 100%  !important; display: inline-block;">
       <video id="vid" playsinline autoplay muted style="position: fixed; width: 100%  !important; height: 50%; object-fit: cover;" onended="endVideo()">
-        <source src="{{site.baseurl}}/images/WebsiteBanner2.mp4.icloud" type="video/mp4">Browser does not support HTML5 video
+        <source src="{{site.baseurl}}/images/WebsiteBanner2.mp4" type="video/mp4">Browser does not support HTML5 video
       </video>
 
       <button id="but" disabled onclick="location.href='{{site.baseurl}}/about/';" style="position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); visibility: hidden; border: none; outline: 0; display: inline-block; padding: 10px 25px; color: black;
